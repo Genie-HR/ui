@@ -1,30 +1,9 @@
- .logo {
-     width: 120px;
-     height: 31px;
-     background: rgba(255, 255, 255, 0.2);
-     margin: 16px 30px 16px 0;
-     float: left;
- }
 
- .header-menu {
-     line-height: 64px;
- }
-
- .sider-menu {
-     height: 100%;
-     border-right: 0px;
- }
-
- .inner-layout {
-     padding: 0 12px 12px;
- }
-
- nz-breadcrumb {
-     margin: 16px 0;
- }
-
- nz-content {
+ nz-header {
      background: #fff;
-     padding: 12px;
-     min-height: 600px;
+     padding-left: 8px;
+    padding-right: 8px;
+     border-bottom: 1px solid darkgray;
+     height: 48px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
  }
