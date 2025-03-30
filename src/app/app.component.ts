@@ -29,9 +29,8 @@ export class AppComponent {
 
     this.oidcSecurityService.checkAuth().subscribe(({ isAuthenticated }) => {
       this.isAuthenticated = isAuthenticated;
-      if (isAuthenticated) this.oidcSecurityService.getPayloadFromAccessToken().subscribe(userData => { this.fullName = userData.name })
+      if (isAuthenticated) this.oidcSecurityService.getPayloadFromAccessToken().subscribe(userData => { console.log('userData', userData); this.fullName = userData.name })
     });
-
   }
 
   login(): void {
@@ -51,11 +50,7 @@ export class AppComponent {
 
       window.location.href = logoutUrl;
     }
-    // this.oidcSecurityService.logoffAndRevokeTokens().subscribe(() => {
 
-    // console.log('logged out')
-    // this.router.navigate(['/']).then((postNavigation) => { console.log('navigated', postNavigation) })
-    // })
   }
 }
 
